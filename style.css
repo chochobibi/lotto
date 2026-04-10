@@ -157,6 +157,6 @@ h1 {
     transition: background 0.3s ease;
 }
 
-.submit-btn:hover {
-    background: #555;
+#disqus_thread {
+    margin-top: 2rem;
 }
