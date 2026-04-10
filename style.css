@@ -1,1 +1,84 @@
-/* Add styles here */
+body {
+    background-color: #1a1a1a; /* 약간 더 부드러운 검은색 */
+    color: #f0f0f0;
+    font-family: 'Nanum Gothic', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('https://www.transparenttextures.com/patterns/subtle-grunge.png'); /* 은은한 질감 추가 */
+}
+
+.container {
+    text-align: center;
+    padding: 2.5rem;
+    background-color: #2c2c2c;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    border: 1px solid #444;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #e0e0e0;
+}
+
+#generate-btn {
+    background: linear-gradient(145deg, #0d6efd, #0a58ca);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(13, 110, 253, 0.6);
+}
+
+#generate-btn:hover {
+    background: linear-gradient(145deg, #0a58ca, #0d6efd);
+    box-shadow: 0 0 25px rgba(13, 110, 253, 0.9);
+    transform: translateY(-2px);
+}
+
+#results-container {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.result-set {
+    background-color: #3a3a3a;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.number {
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 로또 용지 색상 규칙 */
+.color-yellow { background-color: #fbc400; color: #333; } /* 1-10 */
+.color-blue { background-color: #69c8f2; color: #333; }   /* 11-20 */
+.color-red { background-color: #ff7272; color: #fff; }     /* 21-30 */
+.color-gray { background-color: #aaa; color: #fff; }      /* 31-40 */
+.color-green { background-color: #b0d840; color: #333; }  /* 41-45 */
