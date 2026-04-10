@@ -104,3 +104,59 @@ h1 {
 .color-red { background-color: #ff7272; color: #fff; }     /* 21-30 */
 .color-gray { background-color: #aaa; color: #fff; }      /* 31-40 */
 .color-green { background-color: #b0d840; color: #333; }  /* 41-45 */
+
+.divider {
+    margin: 3rem 0;
+    border: none;
+    border-top: 1px solid #444;
+}
+
+.contact-section {
+    margin-top: 2rem;
+}
+
+.contact-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: none;
+}
+
+.submit-btn {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #555;
+}
