@@ -11,6 +11,7 @@ function getNumberColorClass(number) {
 
 generateBtn.addEventListener('click', () => {
     resultsContainer.innerHTML = '';
+
     for (let i = 0; i < 5; i++) {
         const numberSet = new Set();
         while (numberSet.size < 6) {
@@ -20,11 +21,14 @@ generateBtn.addEventListener('click', () => {
 
         const resultSetDiv = document.createElement('div');
         resultSetDiv.classList.add('result-set');
+        resultSetDiv.style.animationDelay = `${i * 0.15}s`;
 
-        for (const number of sortedNumbers) {
+        for (let j = 0; j < sortedNumbers.length; j++) {
+            const number = sortedNumbers[j];
             const numberDiv = document.createElement('div');
             numberDiv.classList.add('number', getNumberColorClass(number));
             numberDiv.textContent = number;
+            numberDiv.style.animationDelay = `${(i * 0.15) + (j * 0.1)}s`;
             resultSetDiv.appendChild(numberDiv);
         }
         resultsContainer.appendChild(resultSetDiv);

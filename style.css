@@ -27,7 +27,7 @@ h1 {
 }
 
 #generate-btn {
-    background: linear-gradient(145deg, #0d6efd, #0a58ca);
+    background: #0d6efd;
     color: white;
     border: none;
     padding: 1rem 2.5rem;
@@ -35,20 +35,26 @@ h1 {
     font-weight: 700;
     border-radius: 12px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 15px rgba(13, 110, 253, 0.6);
+    transition: all 0.1s ease;
+    box-shadow: 0 8px 0 #0a58ca, 0 15px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    top: 0;
 }
 
 #generate-btn:hover {
-    background: linear-gradient(145deg, #0a58ca, #0d6efd);
-    box-shadow: 0 0 25px rgba(13, 110, 253, 0.9);
-    transform: translateY(-2px);
+    top: 2px;
+    box-shadow: 0 6px 0 #0a58ca, 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+#generate-btn:active {
+    top: 6px;
+    box-shadow: 0 2px 0 #0a58ca, 0 5px 10px rgba(0, 0, 0, 0.4);
 }
 
 #results-container {
     margin-top: 2.5rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
 }
 
@@ -61,6 +67,16 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 0.5s ease forwards;
+}
+
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .number {
@@ -73,7 +89,13 @@ h1 {
     align-items: center;
     font-size: 1.4rem;
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 /* 로또 용지 색상 규칙 */
